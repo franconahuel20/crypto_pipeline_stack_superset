@@ -1,0 +1,13 @@
+
+version: 2
+models:
+  - name: stg_coin_market
+    description: "Staging de mercado de cripto desde CoinGecko"
+    tests: []
+  - name: gold_coin_prices_daily
+    description: "Agregación diaria de precios/cap/volumen por moneda"
+    columns:
+      - name: day
+        tests: [not_null]
+      - name: coin_id
+        tests: [not_null]

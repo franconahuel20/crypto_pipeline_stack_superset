@@ -1,0 +1,11 @@
+
+.git
+.venv
+__pycache__
+*.pyc
+dbt/target
+dbt/logs
+superset_home
+airflow/logs
+.ipynb_checkpoints
+.DS_Store

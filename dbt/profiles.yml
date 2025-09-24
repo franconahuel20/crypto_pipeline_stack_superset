@@ -1,0 +1,13 @@
+
+crypto_profile:
+  target: "{{ env_var('DBT_TARGET','dev') }}"
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('DBT_HOST','postgres') }}"
+      user: "{{ env_var('DBT_USER','app') }}"
+      password: "{{ env_var('DBT_PASSWORD','app') }}"
+      port: "{{ env_var('DBT_PORT','5432') | int }}"
+      dbname: "{{ env_var('DBT_DB','crypto') }}"
+      schema: "{{ env_var('DBT_SCHEMA','analytics') }}"
+      threads: 4

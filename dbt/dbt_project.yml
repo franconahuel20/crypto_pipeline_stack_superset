@@ -1,0 +1,16 @@
+
+name: "crypto_dbt"
+version: "1.0.0"
+config-version: 2
+profile: "crypto_profile"
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+snapshot-paths: ["snapshots"]
+models:
+  crypto_dbt:
+    +materialized: view
+    staging:
+      +schema: analytics
+    marts:
+      +schema: analytics
